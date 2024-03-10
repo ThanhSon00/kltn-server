@@ -1,0 +1,11 @@
+// .sequelizerc
+
+const path = require('path');
+const config = require('./src/config/config');
+
+module.exports = {
+  'env': config.env,
+  'config': path.resolve('config', 'database.js'),
+  'seeders-path': path.resolve('src', 'db', 'seeders'),
+  'migrations-path': path.resolve('src', 'db', 'migrations')
+};
